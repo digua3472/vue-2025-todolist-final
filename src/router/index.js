@@ -1,8 +1,30 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
+  history: createWebHashHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: () => import('../views/HomeView.vue'),
+    },
+    {
+      path: '/login',
+      component: () => import('../views/LoginView.vue'),
+    },
+    {
+      path: '/signup',
+      component: () => import('../views/RegisterView.vue'),
+    },
+    {
+      path: '/todolist',
+      component: () => import('../views/TodolistView.vue'),
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/todolist',
+    },
+  ],
 })
 
 export default router
