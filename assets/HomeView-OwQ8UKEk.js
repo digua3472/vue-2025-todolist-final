@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vueexport-helper-DlAUqK2U.js";import{c as o,o as c}from"./index-B6nk2Eg0.js";const r={};function n(t,a){return c(),o("main",null," 首頁 ")}const m=e(r,[["render",n]]);export{m as default};
